@@ -1,1 +1,5 @@
-
+[
+  { "item": "Product A", "stock": 100, "warehouse": "Warehouse 1" },
+  { "item": "Product B", "stock": 200, "warehouse": "Warehouse 2" },
+  { "item": "Product C", "stock": 150, "warehouse": "Warehouse 3" }
+]
