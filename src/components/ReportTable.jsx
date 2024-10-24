@@ -1,17 +1,30 @@
 import React from 'react';
 
-const TabMenu = ({ tabs, onSelect }) => {
+const ReportTable = ({ reportData }) => {
+  if (!reportData) return null;
+  
+  const keys = Object.keys(reportData[0]);
+
   return (
-    <ul className="nav nav-tabs">
-      {tabs.map(tab => (
-        <li className="nav-item" key={tab.id}>
-          <a className="nav-link" onClick={() => onSelect(tab.id)}>
-            {tab.title}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <table className="table">
+      <thead>
+        <tr>
+          {keys.map(key => (
+            <th key={key}>{key}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {reportData.map((item, index) => (
+          <tr key={index}>
+            {keys.map(key => (
+              <td key={key}>{item[key]}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
-export default TabMenu;
+export default ReportTable;
