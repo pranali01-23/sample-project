@@ -1,0 +1,5 @@
+[
+  { "name": "John Doe", "purchase": "Product A", "amount": 150 },
+  { "name": "Jane Smith", "purchase": "Product B", "amount": 50 },
+  { "name": "Alice Johnson", "purchase": "Product C", "amount": 200 }
+]
